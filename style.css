@@ -1,0 +1,137 @@
+body {
+    font-family: sans-serif;
+    background-color: #008A8A;
+    padding: 10px;
+}
+
+.wrapper {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.header {
+    background-color: gold;
+}
+
+.main {
+    background-color: darkorange;
+}
+
+.aside-1 {
+    background-color: mediumseagreen;
+}
+
+.aside-2 {
+    background-color: seagreen;
+}
+
+.footer {
+    background-color: lightgreen;
+}
+
+.navUl {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 0;
+}
+
+.navUl > li {
+    background-color: lightgrey;
+    border: 1px solid grey;
+    margin: 0;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.Social {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.Social > li {
+    margin: 0;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+}
+.socialbuttons {
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.main {
+    padding: 0;
+}
+
+.main > p {
+    padding: 1rem;
+}
+
+/* Social Icons */
+.facebook {
+    background-color: #4A5495;
+}
+
+.twitter {
+    background-color: #6DA5EF;
+}
+
+.mail {
+    background-color: #767677;
+}
+
+/*Kun näytön koko >426px */
+@media screen and (min-width:426px) {
+    .wrapper {
+        flex-direction: row;
+    }
+    .aside-1 {
+        flex-basis: auto;
+    }
+    .aside-2 {
+        flex-basis: auto;
+    }
+}
+/*Kun näytön koko >769px */
+@media screen and (min-width:769px) {
+    .aside-1 {
+        order: 1;
+        flex-basis: 0px;
+    }
+    .main {
+        order: 2;
+        flex-basis: 400px;
+    }
+    .aside-2 {
+        order: 3;
+        flex-basis: 0;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
